@@ -52,6 +52,8 @@ gem "rails-i18n"
 
 gem "config"
 
+gem "rails-controller-testing"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
