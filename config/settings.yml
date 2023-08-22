@@ -1,1 +1,17 @@
 rails_tutorials_link: "https://news.railstutorial.org/"
+enabled_locales:
+  - :en
+  - :vn
+client:
+  host: "localhost:3000"
+validate:
+  email:
+    length:
+      max: 255
+    regex: !ruby/regexp/ '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i'
+  name:
+    length:
+      max: 50
+  password:
+    length:
+      min: 6
