@@ -58,3 +58,7 @@ en:
   sign_up:
     title: "Sign Up"
     description: "This will be a signup page for new users."
+  flash:
+    users:
+      success: "Welcome to the Sample App!"
+      not_found: "User not found!"

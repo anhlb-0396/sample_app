@@ -26,3 +26,7 @@ vi:
   sign_up:
     title: "Đăng ký"
     description: "Đây sẽ là một trang đăng ký cho người dùng mới."
+  flash:
+    users:
+      success: "Chào mừng bạn đến với Ứng dụng mẫu!"
+      not_found: "Không tìm thấy người dùng!"

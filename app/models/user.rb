@@ -6,7 +6,8 @@ class User < ApplicationRecord
 
   validates :email, presence: true,
             length: {maximum: Settings.validate.email.length.max},
-            format: {with: Regexp.new(Settings.validate.email.regex)}, uniqueness: true
+            format: {with: Regexp.new(Settings.validate.email.regex,
+                                      Regexp::IGNORECASE)}, uniqueness: true
 
   has_secure_password
   validates :password, presence: true,
