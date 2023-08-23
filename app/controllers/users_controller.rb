@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
   def show
     @user = User.find_by id: params[:id]
-    redirect_to :root, flash: { warning: t("flash.users.not_found") } if @user.nil?
+    return unless @user.nil?
+
+    redirect_to :root,
+                flash: {warning: t("flash.users.not_found")}
+
     # debugger
   end
 
@@ -12,6 +16,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
+      reset_session
+      log_in @user
       flash[:success] = t("flash.users.success")
       redirect_to @user
     else
