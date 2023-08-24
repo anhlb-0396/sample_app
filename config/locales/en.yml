@@ -50,6 +50,10 @@ en:
       header:
         title: "Ruby on Rails Tutorial Sample App"
         sign_in: "Log in"
+        profile: "Profile"
+        settings: "Settings"
+        logout: "Log out"
+        account: "Account"
       footer:
         description: The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a> by <a href="https://www.michaelhartl.com/">Michael Hartl</a>
         new: "News"
@@ -61,4 +65,7 @@ en:
   flash:
     users:
       success: "Welcome to the Sample App!"
+      danger: "Invalid email/password combination"
       not_found: "User not found!"
+  sessions:
+    login: "Login"
