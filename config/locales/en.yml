@@ -54,6 +54,7 @@ en:
         settings: "Settings"
         logout: "Log out"
         account: "Account"
+        users: "Users"
       footer:
         description: The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a> by <a href="https://www.michaelhartl.com/">Michael Hartl</a>
         new: "News"
@@ -69,3 +70,6 @@ en:
       not_found: "User not found!"
   sessions:
     login: "Login"
+    remember: "Remember me on this computer"
+    new_user: "New user?"
+    sign_up: "Sign up now!"
