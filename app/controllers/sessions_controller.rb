@@ -4,10 +4,14 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user&.authenticate(params[:session][:password])
-      handle_if_authenticated user
+      if user.activated?
+        handle_if_authenticated_and_inactive user
+      else
+        flash[:warning] = t "account.activate.message"
+        redirect_to root_url
+      end
     else
-      flash.now[:danger] = t("flash.users.danger")
-      render "new", status: :unprocessable_entity
+      error_handle
     end
   end
 
@@ -16,11 +20,18 @@ class SessionsController < ApplicationController
     redirect_to root_url, status: :see_other
   end
 
-  def handle_if_authenticated user
+  private
+
+  def handle_if_authenticated_and_inactive user
     forwarding_url = session[:forwarding_url]
     reset_session
     params[:session][:remember_me] == "1" ? remember(user) : forget(user)
     log_in user
     redirect_to forwarding_url || user
+  end
+
+  def error_handle
+    flash.now[:danger] = t("flash.users.danger")
+    render :new, status: :unprocessable_entity
   end
 end
