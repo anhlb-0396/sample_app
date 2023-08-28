@@ -68,8 +68,21 @@ en:
       success: "Welcome to the Sample App!"
       danger: "Invalid email/password combination"
       not_found: "User not found!"
+      incorrect_user: "Incorrect User"
+      not_admin: "Not Admin!"
+      login: "Please log in."
+      delete: "User Deleted !"
+      profile_updated: "Profile Updated!"
   sessions:
     login: "Login"
     remember: "Remember me on this computer"
     new_user: "New user?"
     sign_up: "Sign up now!"
+  users:
+    delete:
+      description: "Delete"
+      confirm: "You sure?"
+    edit:
+      description: "Save changes"
+      confirm: "Change"
+    password_confirm: "Confirmation"
