@@ -86,3 +86,11 @@ en:
       description: "Save changes"
       confirm: "Change"
     password_confirm: "Confirmation"
+  account:
+    activate:
+      success: "Account activated!"
+      fail: "Invalid activation link"
+      message: "Account not activated. Check your email for the activation link."
+      check_email: "Please check your email to activate your account."
+      subject: "Account activation"
+      link: "Activate"
