@@ -55,14 +55,6 @@ class UsersController < ApplicationController
                                  :password_confirmation)
   end
 
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t "flash.users.login"
-    redirect_to login_url, status: :see_other
-  end
-
   # Confirms the correct user.
   def correct_user
     return if current_user? @user
@@ -85,6 +77,7 @@ flash: {danger: t("flash.users.not_admin")})
 
   def load_user
     @user = User.find_by id: params[:id]
+    @microposts = @user.microposts.paginate(page: params[:page])
     return unless @user.nil?
 
     redirect_to :root,
