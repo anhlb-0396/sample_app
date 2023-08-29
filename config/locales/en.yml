@@ -80,3 +80,12 @@ en:
     deleted: "Micropost deleted!"
     confirm:
       delete: "You sure?"
+  relations:
+    title:
+      following: "Following"
+      follower: "Follower"
+      followers: "followers"
+    confirm:
+      follow: "Follow"
+      unfollow: "Unfollow"
+    view: "View my profile"
