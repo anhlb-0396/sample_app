@@ -74,3 +74,9 @@ en:
       confirm: "Confirmation"
       update: "Update password"
       reset: "Reset password"
+  microposts:
+    feed: "Micropost Feed"
+    created: "Micropost created!"
+    deleted: "Micropost deleted!"
+    confirm:
+      delete: "You sure?"

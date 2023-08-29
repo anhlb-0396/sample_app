@@ -43,6 +43,7 @@ class PasswordResetsController < ApplicationController
   def get_user
     @user = User.find_by(email: params[:email])
     return unless @user.nil?
+
     redirect_to :root,
                 flash: {warning: t("flash.users.not_found")}
   end
