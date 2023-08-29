@@ -15,3 +15,5 @@ validate:
   password:
     length:
       min: 6
+  gravatar:
+    size: 30
